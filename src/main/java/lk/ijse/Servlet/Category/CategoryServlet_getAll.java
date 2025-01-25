@@ -13,7 +13,7 @@ import lk.ijse.BO.BOFactory;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "CategoryListServlet" , value = "/category-List")
+@WebServlet(name = "CategoryListServlet" , value = "/CategoryListServlet")
 public class CategoryServlet_getAll extends HttpServlet {
     CategoryBO categoryBO = (CategoryBO) BOFactory.getBoFactory().getBo(BOFactory.BoType.Category);
     @Override
@@ -21,15 +21,13 @@ public class CategoryServlet_getAll extends HttpServlet {
         try {
             List<CategoryDTO> categories = categoryBO.getAll();
             req.setAttribute("categories", categories);
-            RequestDispatcher rd  = req.getRequestDispatcher("category-List.jsp");
+            RequestDispatcher rd  = req.getRequestDispatcher("CategoryList.jsp");
             rd.forward(req, resp);
 
         } catch (Exception e) {
             req.setAttribute("alertType", "danger");
             req.setAttribute("alertMessage", "Error loading categories: " + e.getMessage());
         }
-        /*RequestDispatcher rd  = req.getRequestDispatcher("category-List.jsp");
-        rd.forward(req, resp);*/
 
     }
 }

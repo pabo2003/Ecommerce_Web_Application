@@ -13,6 +13,7 @@
 <html>
 <head>
     <title>Update Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -86,7 +87,7 @@
         <input type="number" id="productId" name="productId" placeholder="Enter product Id" required>
 
         <label for="productName">Product Name:</label>
-        <input type="number" id="productName" name="productName" placeholder="Enter product name" required>
+        <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
 
         <label for="productDescription">Description:</label>
         <textarea id="productDescription" name="productDescription" rows="4" placeholder="Enter product description" required></textarea>
@@ -103,9 +104,22 @@
         <label for="productImage">Product Image:</label>
         <input type="file" id="productImage" name="productImage" accept="image/*" required>
 
-        <button type="submit" class="btn" onclick="">Update Product</button><br><br>
+        <button type="submit" class="btn" onclick="return confirm('Are you sure you want to update this project?')">Update Product</button><br><br>
         <a href="adminDashBoard.jsp" class="btn">Back to Dashboard</a>
     </form>
 </div>
+
+
+<script>
+    <% if (alertType != null && alertMessage != null) { %>
+
+    Swal.fire({
+        icon: '<%= alertType %>',
+        title: '<%= alertMessage %>',
+        confirmButtonText: 'OK'
+    });
+    <% } %>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

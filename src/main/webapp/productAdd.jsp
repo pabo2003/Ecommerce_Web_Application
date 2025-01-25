@@ -13,6 +13,7 @@
 <html>
 <head>
     <title>Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;

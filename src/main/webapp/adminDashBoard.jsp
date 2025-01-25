@@ -21,6 +21,7 @@
             <li><a href="#categories"><i class="fa fa-tags"></i> Category Management</a></li>
             <li><a href="#orders"><i class="fa fa-shopping-cart"></i> Order Management</a></li>
             <li><a href="#users"><i class="fa fa-users"></i> User Management</a></li>
+            <li><a href="index.jsp"><i class="fa fa-home"></i> Home </a></li>
         </ul>
     </aside>
     <main class="content">
@@ -30,9 +31,9 @@
             <div class="card">
                 <div class="card-content">
                     <a href="productAdd.jsp" class="btn">Add Product</a>
-                    <a href="" class="btn">View Products</a>
+                    <a href="${pageContext.request.contextPath}/ProductListServlet" class="btn">View Products</a>
                     <a href="productUpdate.jsp" class="btn">Update Product</a>
-                    <a href="#" class="btn">Delete Product</a>
+                    <a href="productDelete.jsp" class="btn">Delete Product</a>
                 </div>
             </div>
         </section>
@@ -42,7 +43,7 @@
             <div class="card">
                 <div class="card-content">
                     <a href="CategoryManage.jsp" class="btn">Manage Category</a>
-                    <a href="#" class="btn">View Categories</a>
+                    <a href="${pageContext.request.contextPath}/CategoryListServlet" class="btn">View Categories</a>
                 </div>
             </div>
         </section>

@@ -47,6 +47,6 @@ public class ProductAddServlet extends HttpServlet {
             req.setAttribute("alertType", "error");
             req.setAttribute("alertMessage", "Error: " + e.getMessage());
         }
-        req.getRequestDispatcher("product-add.jsp").forward(req, resp);
+        req.getRequestDispatcher("productAdd.jsp").forward(req, resp);
     }
 }

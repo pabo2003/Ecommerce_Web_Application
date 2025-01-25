@@ -76,6 +76,6 @@ public class CategoryServlet extends HttpServlet {
             req.setAttribute("alertType","danger");
             req.setAttribute("alertMessage","Error: " + e.getMessage());
         }
-        req.getRequestDispatcher("category-form.jsp").forward(req, resp);
+        req.getRequestDispatcher("CategoryManage.jsp").forward(req, resp);
     }
 }
